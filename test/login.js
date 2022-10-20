@@ -1,8 +1,6 @@
 const { assert, expect } = require('chai');
-const { Browser } = require('selenium-webdriver');
-const { Builder, By, Key, until } = require('selenium-webdriver');
-const { waitForUrl } = require('selenium-webdriver/http/util');
-const loginPage = require('../test/elements/LoginPage');
+const { Builder, By, } = require('selenium-webdriver');
+const loginPage = require('../test/pages/LoginPage');
 
 describe('login page', () => {
 	let login;
@@ -13,7 +11,7 @@ describe('login page', () => {
 	});
   afterEach(async () => {
     await driver.quit()
-  } )
+  });
 	it('displays error msg when inputs are empty', async () => {
 		await login.getTermsBox();
 		await login.getSignInBtn();
