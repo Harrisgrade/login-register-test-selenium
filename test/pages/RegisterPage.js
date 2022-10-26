@@ -20,10 +20,8 @@ class RegisterPage {
 
   }
   async invalidCredentials() {
-    await this.driver.findElement(NAME).sendKeys('Ash J. Williams');
-    await this.driver.findElement(USERNAME).sendKeys('the chosen one');
-    await this.driver.findElement(EMAIL).sendKeys('Klaatu@Barada.cough');
-    await this.driver.findElement(PASSWORD).sendKeys('S-Mart');
+    await this.driver.findElement(EMAIL).sendKeys('Klaatu.Barada.cough');
+    await this.driver.findElement(PASSWORD).sendKeys('SMart');
     await this.driver.findElement(PASSWORD_CONFIRM).sendKeys('S-Mart');
     await this.driver.findElement(SUBMIT_BTN).click({force: true});
   }
